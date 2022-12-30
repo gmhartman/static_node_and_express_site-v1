@@ -1,49 +1,69 @@
 {
     "projects": [
         {
-        "id": "0",
+        "id": 0,
         "project_name": "Random Quote Generator",
         "description": "Generates a random quote and new background color every 5 seconds",
         "technologies": ["Object Arrays", "Functions"],
         "live_link": "https://gmhartman.github.io/random-quote-generator/",
         "github_link": "https://github.com/gmhartman/random-quote-generator",
-        "image_urls": "../images/quote-generator.png"
+        "image_urls": [
+            "/static/images/quote-generator.png",
+            "/static/images/quote-generator-yellow.png",
+            "/static/images/quote-generator-blue.png"
+        ]
     },
     {
-        "id": "1",
+        "id": 1,
         "project_name": "Interactive Form",
         "description": "Mobile-first designs are essential in this age of smartphones and tablets. This registration form demonstrates responsive layouts for different sized screens.",
         "technologies": ["HTML Form", "Mobile-First Design"],
         "live_link": "https://gmhartman.github.io/Online-Registration-Form/",
         "github_link": "https://github.com/gmhartman/interactive-form",
-        "image_urls": "../images/interactive-form.png"
+        "image_urls": [
+            "/static/images/registration-form-1.png",
+            "/static/images/registration-form-2.png",
+            "/static/images/registration-form-3.png"
+        ]
     },
     {
-        "id": "2",
+        "id": 2,
         "project_name": "Game Show App",
         "description": "Word guessing game created with JavaScript. Try and guess all the phrases!",
         "technologies": ["Constructors", "Event Listeners"],
         "live_link": "https://gmhartman.github.io/oop-game-show/",
         "github_link": "https://github.com/gmhartman/oop-game-show",
-        "image_urls": "../images/game-show.png"
+        "image_urls": [
+            "/static/images/game-show-app-1.png",
+            "/static/images/game-show.png",
+            "/static/images/game-show-app-3.png"
+        ]
     },
     {
-        "id": "3",
+        "id": 3,
         "project_name": "Public API Requests",
         "description": "This employee directory utilizes API to fetch randomly generated information and display on a grid.",
         "technologies": ["Fetch API", "JavaScript Search Bar"],
         "live_link": "https://gmhartman.github.io/public-api-requests/",
         "github_link": "https://github.com/gmhartman/public-api-requests",
-        "image_urls": "../images/public-api-requests.png"
+        "image_urls": [
+            "/static/images/public-api-requests.png",
+            "/static/images/public-api-requests-2.png",
+            "/static/images/public-api-requests-3.png"
+        ]
     },
     {
-        "id": "4",
+        "id": 4,
         "project_name": "Web App",
         "description": "This dashboard was made using HTML, CSS, and JavaScript to demonstrate many different aspect of web design. Forms, toggle switches, chart.js, and more!",
         "technologies": ["JavaScript Alert Banner", "Chart JS"],
         "live_link": "https://gmhartman.github.io/web-app-dashboard/",
         "github_link": "https://github.com/gmhartman/web-app-dashboard",
-        "image_urls": "../images/web-app.png"
+        "image_urls": [
+            "/static/images/web-app.png",
+            "/static/images/web-app-2.png",
+            "/static/images/web-app-3.png"
+        ]
     }
   ]
 }

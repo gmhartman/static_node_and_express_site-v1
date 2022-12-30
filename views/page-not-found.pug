@@ -1,0 +1,12 @@
+extend layout.pug 
+
+block content 
+
+    h1 Page not found. 
+    h2= err.status 
+    h2= err.message
+
+        nav.nav
+          a(href='/')
+            span &larr;
+            |  Back
