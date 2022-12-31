@@ -4,11 +4,13 @@ const data = require('./data.json').projects;
 const path = require('path');
 const app = express();
 
+
 app.set('view engine', 'pug');
 app.use('/static', express.static('public'));
 
 
 app.get('/', (req, res) => {
+    res.locals.projects = data;
     res.render('index');
 });
 
@@ -33,14 +35,13 @@ app.use((req, res, next) => {
 
 app.use((err, req, res, next) => {
     res.locals.error = err;
-    if (err.status >= 100 && err.status < 600) {
-        res.status(err.status);
-        res.render('page-not-found', {err});
+    if (err.status === 404) {
         console.log('Error Ocurred');
+        res.status(404).render('page-not-found', {err})
     } else {
-        err.status = 500;
         console.log('Error ocurred');
-        res.render('error', {err, req});
+        err.message = err.message || `Something went wrong. Please try again.`;
+        res.status(err.status || 500).render('error', {err});
     }
 });
 
