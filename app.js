@@ -18,9 +18,18 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
-app.get('/project/:id', (req, res) => {
+app.get('/project/:id', (req, res, next) => {
     const projectId = req.params.id;
     const project = data.find( ({ id }) => id === +projectId);
+    if (project) {
+        res.render('project', {project});
+    } else {
+        console.log('Error Ocurred');
+        const err = new Error('Error');
+        err.status = 500;
+        err.message = `An error ocurred`
+        next(err);
+    }
     res.render('project', {project});
 });
 
