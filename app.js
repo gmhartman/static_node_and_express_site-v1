@@ -27,10 +27,9 @@ app.get('/project/:id', (req, res, next) => {
         console.log('Error Ocurred');
         const err = new Error('Error');
         err.status = 500;
-        err.message = `An error ocurred`
+        err.message = `A server error has ocurred. Please try again.`
         next(err);
     }
-    res.render('project', {project});
 });
 
 //error handlers
@@ -45,11 +44,11 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
     res.locals.error = err;
     if (err.status === 404) {
-        console.log('Error Ocurred');
+        console.log('Error - Page Not Found');
         res.status(404).render('page-not-found', {err})
     } else {
-        console.log('Error ocurred');
-        err.message = err.message || `Something went wrong. Please try again.`;
+        console.log('A server error has ocurred. Please try again.');
+        err.message = err.message || `A server error has ocurred. Please try again.`;
         res.status(err.status || 500).render('error', {err});
     }
 });
